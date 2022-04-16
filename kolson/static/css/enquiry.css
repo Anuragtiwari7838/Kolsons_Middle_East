@@ -1,0 +1,1167 @@
+/*second css start*/
+@charset "utf-8";
+/*
+Template Name: Surogou
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+File: Framework CSS
+*/
+
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.6em;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalise {
+    text-transform: capitalize;
+}
+
+.hidden {
+    display: none;
+}
+
+.nospace {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.block {
+    display: block;
+}
+
+.justified {
+    text-align: justify;
+}
+
+.inline * {
+    display: inline-block;
+}
+
+.inline *:last-child {
+    margin-right: 0;
+}
+
+.pushright li {
+    margin-right: 20px;
+}
+
+.pushright li:last-child {
+    margin-right: 0;
+}
+
+.borderedbox {
+    border: 1px solid;
+}
+
+.overlay {
+    position: relative;
+    z-index: 1;
+}
+
+.overlay::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+}
+
+.bgded {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.circle {
+    border-radius: 50%;
+    background-clip: padding-box;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 18px 10px;
+    text-transform: uppercase;
+    border: 1px solid;
+}
+
+blockquote {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    z-index: 1;
+}
+
+blockquote::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 60px;
+    content: "\f10d";
+    z-index: -1;
+}
+
+.clear,
+.group {
+    display: block;
+}
+
+.clear::before,
+.clear::after,
+.group::before,
+.group::after {
+    display: table;
+    content: "";
+}
+
+.clear,
+.clear::after,
+.group,
+.group::after {
+    clear: both;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+.fl_left,
+.imgl {
+    float: left;
+}
+
+.fl_right,
+.imgr {
+    float: right;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.imgl {
+    margin: 0 15px 10px 0;
+    clear: left;
+}
+
+.imgr {
+    margin: 0 0 10px 15px;
+    clear: right;
+}
+
+
+/* Fonts
+--------------------------------------------------------------------------------------------------------------- */
+body,
+input,
+textarea,
+select {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+    font-family: Georgia, "Times New Roman", Times, serif;
+ 
+}
+
+
+/* Forms
+--------------------------------------------------------------------------------------------------------------- */
+form,
+fieldset,
+legend {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+legend {
+    display: none;
+}
+
+label,
+input,
+textarea,
+select,
+button {
+    display: block;
+    resize: none;
+    outline: none;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    /* vertical-align: middle; */
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+:required,
+:invalid {
+    outline: none;
+    box-shadow: none;
+}
+
+::placeholder {
+    opacity: 1;
+}
+
+/* Makes sure the placeholder text is not transparent */
+
+
+/* Generalise
+--------------------------------------------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+    margin: 0 0 20px 0;
+    font-size: 22px;
+    line-height: normal;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.heading.nospace {
+    margin-bottom: 0;
+}
+
+address {
+    font-style: normal;
+    font-weight: normal;
+}
+
+hr {
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: solid;
+    border-width: 1px 0 0 0;
+}
+
+.font-xs {
+    font-size: .8rem;
+}
+
+.font-x1 {
+    font-size: 1.2rem;
+}
+
+.font-x2 {
+    font-size: 1.8rem;
+}
+
+.font-x3 {
+    font-size: 2.8rem;
+}
+
+.wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+/*
+The "hoc" class is a generic class used to centre a containing element horizontally
+It should be used in conjunction with a second class or ID
+*/
+.hoc {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* HTML 5 Overrides
+--------------------------------------------------------------------------------------------------------------- */
+address,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Grid - RS-MQF 1140 V.2 - https://www.os-templates.com/free-basic-html5-templates/rs-mqf-1140
+--------------------------------------------------------------------------------------------------------------- */
+.one_half,
+.one_third,
+.two_third,
+.one_quarter,
+.two_quarter,
+.three_quarter {
+    display: inline-block;
+    /* float: left; */
+    margin: 0 0 0 4.21052%;
+    list-style: none;
+}
+
+.first {
+    margin-left: 0;
+    clear: left;
+}
+
+.one_quarter {
+    width: 21.8421%;
+}
+
+.one_third {
+    width: 30.52631%;
+}
+
+.one_half,
+.two_quarter {
+    width: 47.89473%;
+}
+
+.two_third {
+    width: 65.26315%;
+}
+
+.three_quarter {
+    width: 73.94736%;
+}
+
+
+/* Spacing
+--------------------------------------------------------------------------------------------------------------- */
+.btmspace-10 {
+    margin-bottom: 10px;
+}
+
+.btmspace-15 {
+    margin-bottom: 15px;
+}
+
+.btmspace-30 {
+    margin-bottom: 30px;
+}
+
+.btmspace-50 {
+    margin-bottom: 50px;
+}
+
+.btmspace-80 {
+    margin-bottom: 80px;
+}
+
+.rgtspace-5 {
+    margin-right: 5px;
+}
+
+.rgtspace-10 {
+    margin-right: 10px;
+}
+
+.rgtspace-15 {
+    margin-right: 15px;
+}
+
+.rgtspace-30 {
+    margin-right: 30px;
+}
+
+.rgtspace-50 {
+    margin-right: 50px;
+}
+
+.rgtspace-80 {
+    margin-right: 80px;
+}
+
+.inspace-5 {
+    padding: 5px;
+}
+
+.inspace-10 {
+    padding: 10px;
+}
+
+.inspace-15 {
+    padding: 15px;
+}
+
+.inspace-30 {
+    padding: 30px;
+}
+
+.inspace-50 {
+    padding: 50px;
+}
+
+.inspace-80 {
+    padding: 80px;
+}
+
+
+
+
+
+
+
+
+
+@import url("fontawesome-free/css/fontawesome-all.min.css");
+@import url("framework.css");
+
+
+.row5 {
+    border-top: 1px solid;
+}
+
+
+/* Top Bar
+--------------------------------------------------------------------------------------------------------------- */
+#topbar {
+    padding: 15px 0;
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+#topbar ul li {
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 15px;
+    border-right: 1px solid;
+}
+
+#topbar ul li:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+#topbar i {
+    line-height: normal;
+}
+
+
+/* Header
+--------------------------------------------------------------------------------------------------------------- */
+#header {
+    padding: 50px 0;
+}
+
+#header #logo * {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+#header #logo h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#header #logo h1 span {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+
+
+/* Click to Action
+--------------------------------------------------------------------------------------------------------------- */
+
+
+#cta .sectiontitle {
+    margin-bottom: 50px;
+}
+
+#cta ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Used when elements stack in small viewports */
+#cta ul li div {
+    position: relative;
+    min-height: 60px;
+    padding: 20px;
+    padding-left: 100px;
+}
+
+#cta ul li div i {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    line-height: 58px;
+    font-size: 22px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+#cta ul li div span {
+    display: block;
+    padding: 8px 0 0 0;
+}
+
+#cta ul li div span strong {
+    display: block;
+    text-transform: capitalize;
+}
+
+
+
+*,
+*::before,
+*::after {
+    transition: all .3s ease-in-out;
+}
+
+#mainav form * {
+    transition: none !important;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+
+/* Navigation
+--------------------------------------------------------------------------------------------------------------- */
+nav ul,
+nav ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#mainav,
+#breadcrumb,
+.sidebar nav {
+    line-height: normal;
+}
+
+#mainav .drop::after,
+#mainav li li .drop::after,
+#breadcrumb li a::after,
+.sidebar nav a::after {
+    position: absolute;
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 10px;
+}
+
+/* Top Navigation */
+#mainav {
+    position: relative;
+    margin-bottom: -30px;
+    padding: 0;
+    z-index: 999;
+}
+
+#mainav ul {
+    text-transform: uppercase;
+}
+
+#mainav ul ul {
+    z-index: 9999;
+    position: absolute;
+    width: 180px;
+    text-transform: none;
+    text-align: left;
+}
+
+#mainav ul ul ul {
+    left: 180px;
+    top: 0;
+}
+
+#mainav li {
+    display: block;
+    float: left;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#mainav li:last-child {
+    margin-right: 0;
+}
+
+#mainav li li {
+    width: 100%;
+    margin: 0;
+}
+
+#mainav li a {
+    display: block;
+    padding: 20px;
+}
+
+#mainav li li a {
+    border: solid;
+    border-width: 0 0 1px 0;
+}
+
+#mainav .drop {
+    padding-left: 15px;
+}
+
+#mainav li li a,
+#mainav li li .drop {
+    display: block;
+    margin: 0;
+    padding: 10px 15px;
+}
+
+#mainav .drop::after,
+#mainav li li .drop::after {
+    content: "\f0d7";
+}
+
+#mainav .drop::after {
+    top: 25px;
+    left: 5px;
+}
+
+#mainav li li .drop::after {
+    top: 15px;
+    left: 5px;
+}
+
+#mainav ul ul {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#mainav ul li:hover>ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+#mainav form {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+#mainav form select,
+#mainav form select option {
+    display: block;
+    cursor: pointer;
+    outline: none;
+}
+
+#mainav form select {
+    width: 100%;
+    padding: 5px;
+    border: none;
+}
+
+#mainav form select option {
+    margin: 5px;
+    padding: 0;
+    border: none;
+}
+
+
+
+/* Colours
+--------------------------------------------------------------------------------------------------------------- */
+body {
+    color: #474747;
+    background-color: #FFFFFF;
+}
+
+a {
+    color: #F7A804;
+}
+
+a:active,
+a:focus {
+    background: transparent;
+}
+
+/* IE10 + 11 Bugfix - prevents grey background */
+hr,
+.borderedbox {
+    border-color: #D7D7D7;
+}
+
+label span {
+    color: #FF0000;
+    background-color: inherit;
+}
+
+input:focus,
+textarea:focus,
+*:required:focus {
+    border-color: #56AED4;
+}
+
+.overlay {
+    color: #FFFFFF;
+    background-color: inherit;
+}
+
+.overlay::after {
+    color: inherit;
+    background-color: rgba(0, 0, 0, .55);
+}
+
+.overlay.light {
+    color: #474747;
+}
+
+.overlay.light::after {
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.btn,
+.btn.inverse:hover {
+    color: #FFFFFF;
+    background-color: #F7A804;
+    border-color: #F7A804;
+}
+
+.btn:hover,
+.btn.inverse {
+    color: inherit;
+    background-color: transparent;
+    border-color: inherit;
+}
+
+.logoname {
+    color: #F7A804;
+}
+
+.logoname span {
+    color: #0E74A5;
+}
+
+
+/* Rows */
+.row0,
+.row0 a {
+    color: #FFFFFF;
+    background-color: #0E74A5;
+}
+
+.row1 {
+    color: #474747;
+    background-color: #FFFFFF;
+}
+
+.row2 {
+    color: #474747;
+    background-color: #F4F4F4;
+}
+
+.row3 {
+    color: #474747;
+    background-color: #FFFFFF;
+}
+
+.row4 {
+    color: #474747;
+    background-color: #FFFFFF;
+}
+
+.row5,
+.row5 a {
+    color: #474747;
+    background-color: #FFFFFF;
+}
+
+.row5 {
+    border-color: rgba(0, 0, 0, .1);
+}
+
+.gradient {
+    color: #FFFFFF;
+    background: linear-gradient(to bottom right, #0E74A5, #4FB5F5);
+}
+
+
+/* Top Bar */
+#topbar ul li {
+    border-color: rgba(255, 255, 255, .4);
+}
+
+#topbar div:first-of-type li:first-child a {
+    color: #F7A804;
+}
+
+
+
+
+/* Page Intro */
+#pageintro {
+    color: #FFFFFF;
+}
+
+
+/* Content Area */
+.ringcon {
+    background-color: #FFFFFF;
+    border-color: rgba(0, 0, 0, .2);
+}
+
+.ringcon:hover {
+    color: #FFFFFF;
+    background-color: #F7A804;
+}
+
+.overview>li figure a::after {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.overview>li figure figcaption {
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+/* Click to Action */
+#cta ul li {
+    color: #474747;
+    background-color: #FFFFFF;
+}
+
+#cta ul li div i {
+    color: #4FB5F5;
+    border-color: rgba(0, 0, 0, .1);
+}
+
+
+
+
+/* Navigation */
+#mainav {
+    color: #FFFFFF;
+    background-color: #F7A804;
+}
+
+#mainav li a {
+    color: inherit;
+}
+
+#mainav .active a,
+#mainav a:hover,
+#mainav li:hover>a {
+    color: #0E74A5;
+    background-color: inherit;
+}
+
+#mainav li li a,
+#mainav .active li a {
+    color: #FFFFFF;
+    background-color: rgba(247, 168, 4, .5);
+    /* #F7A804 */
+    border-color: rgba(0, 0, 0, .6);
+}
+
+#mainav li li:hover>a,
+#mainav .active .active>a {
+    color: #0E74A5;
+    background-color: #F7A804;
+}
+
+#mainav form select {
+    color: #474747;
+    background-color: #FFFFFF;
+}
+
+#breadcrumb a {
+    color: inherit;
+    background-color: inherit;
+}
+
+#breadcrumb li:last-child a {
+    color: #F7A804;
+}
+
+.container .sidebar nav a {
+    color: inherit;
+    border-color: #D7D7D7;
+}
+
+.container .sidebar nav a:hover {
+    color: #F7A804;
+}
+
+.pagination a,
+.pagination strong {
+    border-color: #D7D7D7;
+}
+
+.pagination .current * {
+    color: #FFFFFF;
+    background-color: #F7A804;
+}
+
+#backtotop {
+    color: #FFFFFF;
+    background-color: #F7A804;
+}
+
+
+/* Tables + Comments */
+table,
+th,
+td,
+#comments .avatar,
+#comments input,
+#comments textarea {
+    border-color: #D7D7D7;
+}
+
+#comments input:focus,
+#comments textarea:focus,
+#comments *:required:focus {
+    border-color: #F7A804;
+}
+
+th {
+    color: #FFFFFF;
+    background-color: #373737;
+}
+
+tr,
+#comments li,
+#comments input[type="submit"],
+#comments input[type="reset"] {
+    color: inherit;
+    background-color: #FBFBFB;
+}
+
+tr:nth-child(even),
+#comments li:nth-child(even) {
+    color: inherit;
+    background-color: #F7F7F7;
+}
+
+table a,
+#comments a {
+    background-color: inherit;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* Media Queries
+--------------------------------------------------------------------------------------------------------------- */
+@-ms-viewport {
+    width: device-width;
+}
+
+
+/* Max Wrapper Width - Laptop, Desktop etc.
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:1140px) {
+    .hoc {
+        max-width: 1140px;
+    }
+}
+
+
+/* Mobile Devices
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width:978px) {
+    .hoc {
+        max-width: 90%;
+    }
+
+
+
+    @media screen and (max-width:750px) {
+
+        .imgl,
+        .imgr {
+            display: inline-block;
+            float: none;
+            margin: 0 0 10px 0;
+        }
+
+        .fl_left,
+        .fl_right {
+            display: block;
+            float: none;
+        }
+
+        .group .group>*:last-child,
+        .clear .clear>*:last-child,
+        .clear .group>*:last-child,
+        .group .clear>*:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Experimental - Needs more testing in different situations, stops double margin when stacking */
+        .one_half,
+        .one_third,
+        .two_third,
+        .one_quarter,
+        .two_quarter,
+        .three_quarter {
+            display: block;
+            float: none;
+            width: auto;
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
+
+        #topbar {
+            padding-top: 15px;
+            text-align: center;
+        }
+
+        #topbar ul {
+            margin: 0 0 15px 0;
+            line-height: normal;
+        }
+
+
+
+
+    }
+
+    @media screen and (max-width:450px) {
+        #topbar ul li {
+            margin-bottom: 2px;
+            padding-right: 0;
+            border-right: none;
+        }
+    }
+
+
+    /*
+-------------------------------------------------------------------------------------------------------------- */
+     @media screen and (max-width:650px) {
+        .scrollable {
+            display: block;
+            width: 100%;
+            margin: 0 0 30px 0;
+            padding: 0 0 15px 0;
+            overflow: auto;
+            overflow-x: scroll;
+        }
+
+        .scrollable table {
+            margin: 0;
+            padding: 0;
+            white-space: nowrap;
+        }
+
+        .inline li {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .pushright li {
+            margin-right: 0;
+        }
+
+        .font-x2 {
+            font-size: 1.4rem;
+        }
+
+        .font-x3 {
+            font-size: 1.6rem;
+        }
+    } 
+}
+#bgimg{
+    background-image:url('../images/demo/backgrounds/01.png');
+}
+#enqheading{
+    margin-bottom: 5px;
+}
+/* .clints{
+    display: flex;
+    flex-direction: row;
+} */
+.card{
+    min-width: 300px;
+}
+
+
+
