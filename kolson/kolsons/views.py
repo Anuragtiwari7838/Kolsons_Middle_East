@@ -10,33 +10,47 @@ from kolsons.models import Product
 
 
 def enquiry(request):
-    return render(request, 'enquiry.html')
+    product = Product.objects.all()
+    enquirytag = False
+    return render(request, 'enquiry.html',{'product': product,'enquirytag':enquirytag})
 def about(request):
-    return render(request, 'about.html')
+    product = Product.objects.all()
+    return render(request, 'about.html',{'product': product})
 def contactus(request):
-    return render(request, 'contactus.html')
+    product = Product.objects.all()
+    return render(request, 'contactus.html',{'product': product})
 def market(request):
-    return render(request, 'market.html')
+    product = Product.objects.all()
+    return render(request, 'market.html',{'product': product})
 def processcontrol(request):
-    return render(request, 'processcontrol.html')
+    product = Product.objects.all()
+    return render(request, 'processcontrol.html',{'product': product})
 def machinery(request):
-    return render(request, 'machinery.html')
+    product = Product.objects.all()
+    return render(request, 'machinery.html',{'product': product})
 def lifting(request):
-    return render(request, 'lifting.html')
-def telecommunication(request):
-    return render(request, 'telecommunication.html')
+    product = Product.objects.all()
+    return render(request, 'lifting.html',{'product': product})
+def catalogue(request):
+    product = Product.objects.all()
+    return render(request, 'catalogue.html',{'product': product})
+
 def product(request):
     product = Product.objects.all()
     return render(request, 'product.html',{'product': product})
 def client(request):
+    product = Product.objects.all()
     clients = clientsM.objects.all()
-    return render(request, 'client.html',{'clients':clients})
+    return render(request, 'client.html',{'clients':clients,'product': product})
+
 
 
 # following functions return instance of certificats on certifications page
 def certifications(request):
+    product = Product.objects.all()
     certificats = certificatsM.objects.all()
-    return render(request, 'certifications.html',{'certificats':certificats})
+    return render(request, 'certifications.html',{'certificats':certificats,'product': product})
+    
 
 # following function open the requested certificate in browser
 def certificateDoc(request,id):
@@ -49,6 +63,7 @@ def certificateDoc(request,id):
 
 # enquiry form mailing function
 def enquiry_form(request):
+    product = Product.objects.all()
     name = request.POST['name']
     organisation = request.POST['organisation']
     address = request.POST['address']
@@ -59,15 +74,15 @@ def enquiry_form(request):
     comments = request.POST['comments']
      
         
-
+    
     EMAIL_ADDRESS = 'nerthinksjareen@gmail.com'
     EMAIL_PASSWORD = 'Ironman@12'
 
     msg = EmailMessage()
     msg['Subject'] = 'contacting from enquiry form'
     msg['From'] = EMAIL_ADDRESS
-    msg['To'] =email
-    mg = f"name:{name}\nOrganisation:{organisation}\nAdress:{address}\nPhone:{phone}\nEmail:{email}Product intrested in:{pii}\nQuantity:{quantity}\nComments/Suggestions/feedback:{comments}\n"
+    msg['To'] ="info@kolsons.com"
+    mg = f"name:{name}\nOrganisation:{organisation}\nAdress:{address}\nPhone:{phone}\nEmail:{email}\nProduct intrested in:{pii}\nQuantity:{quantity}\nComments/Suggestions/feedback:{comments}\n"
 
     msg.set_content(mg)
     
@@ -77,8 +92,9 @@ def enquiry_form(request):
         smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
         smtp.send_message(msg)
 
+    enquirytag = True
    
-    return render(request,'enquiry.html')
+    return render(request,'enquiry.html',{'product': product,'enquirytag': enquirytag})
 
 
 
@@ -86,6 +102,7 @@ def enquiry_form(request):
 
 
 def productpost(request,id):
+    broduct = Product.objects.all()
     product = Product.objects.filter(part_no=id).first()
     
     flag=[]
